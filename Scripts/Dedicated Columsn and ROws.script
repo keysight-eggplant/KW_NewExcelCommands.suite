@@ -1,0 +1,9 @@
+set MyWorkBook to Workbook(ResourcePath("run_11010_log.xlsx")) 
+set RUnLog to MyWorkbook.Worksheet("run_11010_log")
+
+## specific columns
+put runlog.cellrange(Columns:("B","D") ) into JustColumns
+put the number of items in item 1 of justcolumns
+## specific rows
+put runlog.cellrange(rows:("50","100") ) into JustRows
+put the number of items in item 1 of JustRows

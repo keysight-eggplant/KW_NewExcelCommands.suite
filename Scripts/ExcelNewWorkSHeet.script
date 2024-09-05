@@ -1,0 +1,18 @@
+﻿set MyWorkBook to Workbook(ResourcePath("run_11010_log.xlsx")) 
+set RUnLog to MyWorkbook.Worksheet("run_11010_log")
+try put newWorkSheet(myworkbook, "MyTable")
+put myWorkbook's worksheetCount 
+put the worksheetNames of myWorkbook
+(* put newWorkSheet(myworkbook, "Test",copyFrom:Runlog) -- Error: Function newworksheet should be called with between 1 and 2 parameters : KW: Not sure User will be able to decyfer this :-) and come to the conclusion that name: is missing before Test
+put newWorkSheet(myworkbook, name:"Test",copyFrom:Runlog) -- Error: Value for copyFrom: must be a worksheet object
+
+put newWorkSheet(workbook:myworkbook, name:"Test",copyFrom:Runlog) -- Error:  Function newworksheet was called with invalid parameters 
+## 
+put newWorkSheet(myworkbook, name:"Test",copyFrom:MyWorkbook.Worksheet("run_11010_log")) ##Is it possible to use a Variable for CopyFrom?  *)
+#put newWorkSheet(myworkbook, name:"Test1",copyFrom:MyWorkbook.Worksheet("run_11010_log"),position:0) -- positon:0 adds ot at the end
+
+put newWorkSheet(myworkbook, name:"Test",copyFrom:MyWorkbook.Worksheet("run_11010_log"),sequenceNumber:1) -- sequenceNumber:1 is also at the end
+
+put myWorkbook's worksheetCount 
+put the worksheetNames of myWorkbook
+

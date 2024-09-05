@@ -1,0 +1,10 @@
+﻿set MyWorkBook to Workbook(ResourcePath("run_11010_log.xlsx")) 
+set RUnLog to MyWorkbook.Worksheet("run_11010_log")
+
+set test2 to MyWorkbook.Worksheet("Test2")
+
+put the mergerange of cell("A1") of test2
+set the mergeRange of cell(“A2”) of test2 to “A2:F2”
+put the mergerange of cell("A2") of test2
+delete  test2's cell("A2").mergeRange
+put the mergerange of cell("A2") of test2

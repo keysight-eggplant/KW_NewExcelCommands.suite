@@ -1,0 +1,14 @@
+﻿set MyWorkBook to Workbook(ResourcePath("run_11010_log.xlsx")) 
+set RUnLog to MyWorkbook.Worksheet("run_11010_log")
+
+#put newWorkSheet(myworkbook, name:"Test2",copyFrom:MyWorkbook.Worksheet("run_11010_log"),position:1)
+
+set test2 to MyWorkbook.Worksheet("Test2")
+
+#insertcolumns Test2, "B" -- Value is not a number: 'B'
+#insertcolumns Test2, "2" -- works
+#detecolumns TEst2 , 2 -- works
+#deletecolumns TEst2 , "E" -- Value is not a number: 'E'
+
+#insertrows Test2, 1
+deleterows Test2, 1

@@ -1,0 +1,18 @@
+﻿set MyWorkBook to Workbook(ResourcePath("run_11010_log.xlsx")) 
+put myWorkbook is a workbook --> True   (myWorkbook is a workbook object)
+put myWorkbook's worksheetCount --> 3
+put the worksheetNames of myWorkbook --> ["People","Departments","Facilities"]
+put
+
+set RUnLog to MyWorkbook.Worksheet("run_11010_log")
+put RUnLog.cell("A1")
+put runlog.cellrange("A1","G1")
+put runlog.cellrange("A","G") into mytable
+
+
+## Create new worksheet
+
+
+
+
+put 

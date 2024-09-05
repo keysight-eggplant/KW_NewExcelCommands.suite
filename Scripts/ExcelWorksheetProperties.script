@@ -1,0 +1,18 @@
+﻿set MyWorkBook to Workbook(ResourcePath("run_11010_log.xlsx")) 
+set RUnLog to MyWorkbook.Worksheet("run_11010_log")
+
+put runlog's sequencenumber
+#put the sequencenumber of MyWorkbook.Worksheet("Test")
+
+put myworkbook.worksheet(2) is hidden
+
+turn on the hidden of runlog
+put runlog is hidden
+turn off the hidden of runlog
+
+put the tabcolor of runlog
+put the tabcolor of runlog into MyColorDefault
+set the tabcolor of runlog to blue
+put the tabcolor of runlog
+set the tabcolor of runlog to MyColorDefault
+put the hyperlinks of runlog
